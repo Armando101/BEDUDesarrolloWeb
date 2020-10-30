@@ -1,0 +1,43 @@
+/* CSS es un lenguaje en cascada
+A pesar de esto no aplica el ultimo estilo, eso es por la especificidad */
+
+body {
+    background-color: papayawhip;
+}
+
+#header {
+    color: darkgreen;
+}
+
+.header {
+    color: darkcyan;
+}
+
+h1 {
+    color: cadetblue;
+}
+
+.form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    border-radius: 10px;
+    outline: none;
+    border: 0px;
+    box-shadow: 1px 1px 5px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.form button {
+    line-height: 50px;
+    background-color: skyblue;
+    box-shadow: 1px 1px 5px black;
+    color: white;
+    border-radius: 50px;
+    border: 0px;
+    width: 30%;
+}
