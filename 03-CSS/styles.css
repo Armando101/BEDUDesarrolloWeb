@@ -26,3 +26,16 @@ body {
     background-color: antiquewhite;
 
 }
+
+.publish {
+    display: flex;
+    flex-direction: column;
+}
+
+.publish__info h3 {
+    color: #025157;
+}
+
+.publish__info p {
+    color: #343434;
+}
