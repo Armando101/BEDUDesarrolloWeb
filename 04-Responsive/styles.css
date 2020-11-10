@@ -1,0 +1,42 @@
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 40px;
+    color: #025157;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container__card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+    width: 15%;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.container__card img {
+    width: 20%;
+}
+
+.container__card h3 {
+    text-align: center;
+}
+
+.container__card p {
+    text-align: center;
+    color: gray;
+}
+
+.item {
+    background-color: aqua;
+    width: 5%;
+    height: 50px;
+}
