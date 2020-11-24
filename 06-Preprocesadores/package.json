@@ -1,0 +1,16 @@
+{
+  "name": "06-preprocesadores",
+  "version": "1.0.0",
+  "description": "Preprocesadores de CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "less",
+    "stylus"
+  ],
+  "author": "Armando Rivera",
+  "license": "MIT"
+}
