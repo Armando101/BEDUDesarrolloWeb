@@ -1,0 +1,8 @@
+// @import './global';
+@import './mixin';
+@import './herencia';
+
+.blog {
+    max-width: unset;
+    padding: 5% 10%;
+}

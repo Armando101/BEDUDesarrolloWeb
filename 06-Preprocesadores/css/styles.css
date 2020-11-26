@@ -1,3 +1,33 @@
+h1 {
+  font-size: 1.3em;
+  padding: 15px;
+  background-color: #111;
+  color: #eee;
+}
 
+h2 {
+  padding: 5px;
+  background-color: #111;
+  color: #eee;
+}
+
+h4, h3 {
+  background-color: blanchedalmond;
+  color: brown;
+  font-family: "Times New Roman", "Times", "sans-serif";
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+.blog {
+  max-width: unset;
+  padding: 5% 10%;
+}
 
 /*# sourceMappingURL=styles.css.map */

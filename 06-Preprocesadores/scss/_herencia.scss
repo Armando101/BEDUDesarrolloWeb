@@ -1,0 +1,15 @@
+%heading {
+    background-color: blanchedalmond;
+    color: brown;
+    font-family: 'Times New Roman', 'Times', 'sans-serif';
+}
+
+h3 {
+    @extend %heading;
+    font-size: 2em;
+}
+
+h4 {
+    @extend %heading;
+    font-size: 1.5em;
+}
