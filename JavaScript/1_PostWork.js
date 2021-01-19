@@ -42,6 +42,20 @@ var car = {
   year: 2021
 }
 
+var persona = {
+  name: john,
+  auto: car
+}
+
+var persona2 = {
+  name: john,
+  auto:  {
+    brand: 'BMW',
+    color: 'Black',
+    year: 2050
+  }
+}
+
 console.log('Test 1:', deepEqual(1, 1)) // true
 console.log('Test 2:', deepEqual(1, '1')) // false
 console.log('Test 3:', deepEqual(john, john)) // true
@@ -51,6 +65,8 @@ console.log('Test 5:', deepEqual(john, { firstName: 'John' })) // false
 console.log('Test 6:', deepEqual(car, car)) // true
 console.log('Test 7:', deepEqual(car, { brand: 'BMW', color: 'Black', year: 1999 })) // false
 console.log('Test 7:', deepEqual(car, { brand: 'BMW', color: 'Black', year: 2021 })) // false
+console.log('Test 8:', deepEqual(persona, persona)) // true
+console.log('Test 9:', deepEqual(persona, persona2)) // false
 
 // Ejercicio 2
 function chunk(array, size) {
