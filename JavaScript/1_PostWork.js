@@ -48,7 +48,23 @@ console.log('Test 3:', deepEqual(john, john)) // true
 console.log('Test 4:', deepEqual(john, { firstName: 'John', lastName: 'Doe' })) // true
 console.log('Test 5:', deepEqual(john, { firstName: 'John' })) // false
 
-// console.log('Test 6:', deepEqual(car, car)) // true
+console.log('Test 6:', deepEqual(car, car)) // true
 console.log('Test 7:', deepEqual(car, { brand: 'BMW', color: 'Black', year: 1999 })) // false
 console.log('Test 7:', deepEqual(car, { brand: 'BMW', color: 'Black', year: 2021 })) // false
 
+// Ejercicio 2
+function chunk(array, size) {
+  const newArr = [...array];
+  let finalArray = [];
+  for (let i = 0; i < array.length; i+=size) {
+    // debugger
+    finalArray.push(newArr.splice(0, size));
+  }
+  return finalArray;
+};
+
+var data = [1, 2, 3, 4, 5, 6, 7, 8]
+
+console.log('Test 1:', chunk(data, 1)) // [[1], [2], [3], [4], [5], [6], [7], [8]]
+console.log('Test 2:', chunk(data, 2)) // [[1, 2], [3, 4], [5, 6], [7, 8]]
+console.log('Test 3:', chunk(data, 3)) // [[1, 2, 3], [4, 5, 6], [7, 8]]
