@@ -57,7 +57,6 @@ function chunk(array, size) {
   const newArr = [...array];
   let finalArray = [];
   for (let i = 0; i < array.length; i+=size) {
-    // debugger
     finalArray.push(newArr.splice(0, size));
   }
   return finalArray;
@@ -68,3 +67,25 @@ var data = [1, 2, 3, 4, 5, 6, 7, 8]
 console.log('Test 1:', chunk(data, 1)) // [[1], [2], [3], [4], [5], [6], [7], [8]]
 console.log('Test 2:', chunk(data, 2)) // [[1, 2], [3, 4], [5, 6], [7, 8]]
 console.log('Test 3:', chunk(data, 3)) // [[1, 2, 3], [4, 5, 6], [7, 8]]
+
+// Reto 3
+function frequency(string) {
+  const obj = {};
+  const stringToArr = string.split('');
+  for (let i = 0; i < stringToArr.length; i++) {
+    let currentValue = stringToArr[i];
+    if (obj[currentValue]) {
+      obj[currentValue]++;
+    } else {
+      obj[currentValue] = 1;
+    }
+  }
+  return obj;
+}
+
+console.log('Test 1:', frequency('cccbbbaaa'))
+// {a: 3, b: 3, c: 3}
+console.log('Test 2:', frequency('www.bedu.org'))
+// {.: 2, b: 1, d: 1, e: 1, g: 1, o: 1, r: 1, u: 1, w: 3}
+console.log('Test 3:', frequency('john.doe@domain.com'))
+// {.: 2, @: 1, a: 1, c: 1, d: 2, e: 1, h: 1, i: 1, j: 1, m: 2, n: 2, o: 4}
