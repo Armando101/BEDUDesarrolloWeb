@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <meta charset="utf8" />
+  <title>Reto 3: Navegando entre tabs</title>
+</head>
+
+<body>
+
+  <div id="tab-panel">
+    <div data-tabname="First">Tab one</div>
+    <div data-tabname="Second">Tab two</div>
+    <div data-tabname="Third">Tab three</div>
+  </div>
+
+  <script>
+
+    function createButtons(childrens) {
+      const buttonArray = [];
+      childrens.forEach(children => {
+        const button = document.createElement('button');
+        button.textContent = children.dataset.tabname;
+        buttonArray.push(button);
+      });
+
+      return buttonArray;
+    }
+
+    /**
+     *
+     * @param {HTMLElement} node
+     */
+    function createTabs(node) {
+      const childrends = [...node.children];
+      const buttons = createButtons(childrends);
+      node.append(...buttons);
+    }
+
+    function deleteNodes(node) {
+      const childrendsDiv = [...node.children]
+        .filter(children => children.nodeName === 'DIV');
+      childrendsDiv.map(children => children.style.display = 'none');
+      return childrendsDiv;
+    }
+
+    document.addEventListener('click', function (event) {
+      const option = event.target.outerText;
+      const divs = deleteNodes(tabs);
+      switch (option) {
+        case 'First':
+          divs[0].style.display = 'flex';
+          break;
+
+        case 'Second':
+          divs[1].style.display = 'flex';
+          break;
+
+        case 'Third':
+          divs[2].style.display = 'flex';
+          break;
+      }
+      // debugger;
+    });
+
+    const tabs = document.getElementById('tab-panel');
+    createTabs(tabs);
+    deleteNodes(tabs);
+  </script>
+</body>
+
+</html>
